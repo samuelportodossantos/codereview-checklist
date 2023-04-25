@@ -143,7 +143,7 @@ export default {
         let text = `<h2>Code Review Sz.Chat</h2>
         <ul>`
         
-        this.checklist.map((element, index) => {
+        this.checklist.map(element => {
           let icon = this.getIconByStatus(element.defaultStatus)
           text += `<li>${icon} ${element.question}</li>`
         })
