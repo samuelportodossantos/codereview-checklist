@@ -1,6 +1,8 @@
 <template>
   <div id="app">
 
+    <input type="text" v-model="assign" placeholder="assinatura">
+
     <table>
       <caption>Review checklist</caption>
       <thead>
@@ -28,6 +30,7 @@ export default {
     components: { QuestionRow },
     data() {
       return {
+        assign: '',
         checklist: [
           {
             id: 1,
@@ -122,9 +125,11 @@ export default {
         ]
       }
     },
+    mounted() {
+      this.assign = localStorage.getItem('assign')
+    },
     methods: {
       setResponse(event) {
-        console.log("🚀 ~ file: App.vue:34 ~ setResponse ~ event:", event)
         const index = this.checklist.findIndex(element => element.id == event.uid)
         if (index !== -1) {
           this.checklist[index].defaultStatus = event.status
@@ -154,8 +159,14 @@ export default {
             <li>:white_check_mark: Ok</li>
             <li>:x: Precisa ajustar</li>
             <li>:large_blue_circle: Não se aplica a atividade</li>
-          </ul>`
+          </ul> <br/>`
+
+        text += `
+          Assign: ${this.assign}
+        `
         navigator.clipboard.writeText(text)
+        console.log(this.assign);
+        localStorage.setItem('assign', this.assign)
       }
     }
 }
