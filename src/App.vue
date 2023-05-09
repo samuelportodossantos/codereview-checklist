@@ -2,6 +2,9 @@
   <div id="app">
 
     <input type="text" v-model="assign" placeholder="assinatura">
+    <br/>
+
+    <a target="_blank" href="https://github.com/samuelportodossantos/codereview-checklist">Github</a>
 
     <table>
       <caption>Review checklist</caption>
