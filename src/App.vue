@@ -6,6 +6,8 @@
 
     <a target="_blank" href="https://github.com/samuelportodossantos/codereview-checklist">Github</a>
 
+    <div class="alert-message">⚠️ Lembrar de aprovar o merge request</div>
+
     <table>
       <caption>Review checklist</caption>
       <thead>
@@ -241,5 +243,16 @@ td div {
   width: 100%;
   display: flex;
   justify-content: flex-start;
+}
+
+.alert-message{
+  padding: 20px;
+  background-color: yellow;
+  border: 2px solid tomato;
+  border-radius: 5px;
+  margin-bottom: 10px;
+  margin-top: 10px;
+  font-size: 20px;
+  color: white;
 }
 </style>
