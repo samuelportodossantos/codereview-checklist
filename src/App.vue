@@ -247,8 +247,8 @@ td div {
 
 .alert-message{
   padding: 20px;
-  background-color: yellow;
-  border: 2px solid tomato;
+  background-color: #ff9431;
+  border: 2px solid #7e4237;
   border-radius: 5px;
   margin-bottom: 10px;
   margin-top: 10px;
